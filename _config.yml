@@ -3,10 +3,9 @@
 # ----------------------- #
 
 url: http://itchyankles.github.io/words
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
-simple_search: http://google.com/search
+title: Words
+subtitle: "Things I've learned, places I've gone, things I've eaten"
+author: Ryan Levick
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
