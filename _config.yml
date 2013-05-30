@@ -4,7 +4,7 @@
 
 url: http://itchyankles.github.io/words
 title: Words
-subtitle: "Things I've learned, places I've gone, things I've eaten"
+subtitle: "Things I've learned, Places I've gone, Food I've eaten"
 author: Ryan Levick
 description:
 
@@ -18,7 +18,7 @@ date_format: "ordinal"
 subscribe_rss: /words/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: ryan.levick@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -62,13 +62,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: itchyankles
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: itchyankles
 twitter_tweet_button: true
 
 # Google +1
