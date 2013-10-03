@@ -15,7 +15,7 @@ it takes us.
 
 ## Functional Programming and Object Orientation
 Often when you ask programmers what the opposite of functional programming is,
-they simple reply "well, object oriented programming, of course!".
+they simply reply "well, object oriented programming, of course!".
 
 Unfortunately, this isn't true. Object orientation and functional programming are
 [orthogonal to one another](http://stackoverflow.com/questions/3949618/are-fp-and-oo-orthogonal),
