@@ -10,7 +10,7 @@ Here's an idea: [Erlang](http://www.erlang.org/) is the only true object oriente
 language in use today.
 
 You might be thinking "[WATTTT](http://i.imgur.com/lH5ExZq.gif), that doesn't
-make any sense". But bare with me. Let's examine this idea a bit and see where
+make any sense". But bear with me. Let's examine this idea a bit and see where
 it takes us.
 
 ## Functional Programming and Object Orientation
