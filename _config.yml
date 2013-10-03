@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://itchyankles.github.io/words
+url: http://rylev.github.io/words
 title: Words
 subtitle: "Things I've learned, Places I've gone, Food I've eaten"
 author: Ryan Levick
@@ -62,7 +62,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user: itchyankles
+github_user: rylev
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
