@@ -6,12 +6,12 @@ comments: true
 categories: tips, learning, yak-shaving
 ---
 
-Being productive is really in. Everyone wants to get more and more done in
+Being productive is more popular than ever. Everyone wants to get more and more done in
 less and less time. And no wonder. Getting things done feels really good.
 
-Yet, getting things done is not always the best way to spend our time.
+Yet, "getting things done" is not always the best way to spend our time.
 [Yakshaving](http://www.urbandictionary.com/define.php?term=yak%20shaving),
-done in a disciplined way, can also be a good way to spend time.
+done in the right way, can also be a good way to spend time.
 
 Here are some reaons why I find disciplined yak shaving to be a good thing and
 some things I've learned along the way about how to do it well.
@@ -39,16 +39,16 @@ at the boundaries of what I learned faded away.
 
 While the uneasy feeling that comes with "just not knowing" would come back,
 the peace that deliberate yak shaving had afforded me allowed me to learn
-better.
+more effectively.
 
 ### Self Improvement Yak Shaving
 
 We tend to stick to what we know. Now that I'm beyond being a beginner, I've
 noticed that if I wanted to, I could get by just fine on what I already know.
 However, anyone who enjoys what they do (as I do programming) knows that this
-will just not suffice.
+just won't cut it.
 
-Reading books and listening to podcasts can be a way to further yourself, but
+Reading books and listening to podcasts are some ways to further yourself, but
 often times the best way to learn new things is to go on a good ol' fashion yak
 shave. Put yourself in the middle of an area where you "shouldn't be" and force
 yourself to learn your way out.
@@ -60,11 +60,17 @@ start yak shaving. Don't, for example, go on a great yak shave while the
 servers you're in charge of a work are on fire.
 
 However, it's equally, if not more, important to know when to stop yak shaving.
-In order to reap the benefits of edifying yak shaving you need to return to
-the original task at hand.
+In order to reap the benefits of an edifying yak shaving you need to return to
+the original task at hand. Stay too far away and you may never get back.
 
-Also, knowing your limits of where you think your yak shaving should take you
+Also, knowing the limits of where you think the yak shaving should take you
 is very important. You don't want yak shaving to become an extremely tedious or
-frustrating activiy. If you feel overly frustrated, you've gone too far.
+frustrating activiy. If you feel overly frustrated, you've gone too far, and
+you'll kill the motivating experience that yak shaving can be.
+
+So I suggest giving a yak shave a go. See how long you stick to each part of
+the yak shave. Do you spend too much time on one thing so that you've forgetten
+how and why you got there? Do you spend too little time and fail to appreciate
+what you can learn at each step?
 
 Happy Yak Shaving!
