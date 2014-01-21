@@ -10,10 +10,10 @@ Being productive is more popular than ever. Everyone wants to get more and more 
 less and less time. And no wonder. Getting things done feels really good.
 
 Yet, "getting things done" is not always the best way to spend our time.
-[Yakshaving](http://www.urbandictionary.com/define.php?term=yak%20shaving),
+[yak shaving](http://www.urbandictionary.com/define.php?term=yak%20shaving),
 done in the right way, can also be a good way to spend time.
 
-Here are some reaons why I find disciplined yak shaving to be a good thing and
+Here are some reasons why I find disciplined yak shaving to be a good thing and
 some things I've learned along the way about how to do it well.
 
 ### Edifying Yak Shaving
@@ -34,7 +34,7 @@ to understand. I was not only able to achieve this because my time in Ruby land
 had taught me what a "@" really means, but also because the edges around what
 I was learning became clearer.
 
-Through my deliberate yak shaving distraction, the distracting "great unkown"
+Through my deliberate yak shaving distraction, the distracting "great unknown"
 at the boundaries of what I learned faded away.
 
 While the uneasy feeling that comes with "just not knowing" would come back,
@@ -65,11 +65,11 @@ the original task at hand. Stay too far away and you may never get back.
 
 Also, knowing the limits of where you think the yak shaving should take you
 is very important. You don't want yak shaving to become an extremely tedious or
-frustrating activiy. If you feel overly frustrated, you've gone too far, and
+frustrating activity. If you feel overly frustrated, you've gone too far, and
 you'll kill the motivating experience that yak shaving can be.
 
 So I suggest giving a yak shave a go. See how long you stick to each part of
-the yak shave. Do you spend too much time on one thing so that you've forgetten
+the yak shave. Do you spend too much time on one thing so that you've forgotten
 how and why you got there? Do you spend too little time and fail to appreciate
 what you can learn at each step?
 
