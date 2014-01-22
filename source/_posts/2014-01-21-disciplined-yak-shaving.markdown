@@ -29,7 +29,7 @@ bit into programming language interpreters.
 
 Of course, one doesn't need to know anything about the Ruby interpreter to be
 an expert Rails developer. And many would even argue that learning such things
-only servers as a distraction. However, when I then went back to Rails I found things easier
+only serves as a distraction. However, when I then went back to Rails I found things easier
 to understand. I was not only able to achieve this because my time in Ruby land
 had taught me what a "@" really means, but also because the edges around what
 I was learning became clearer.
@@ -57,7 +57,7 @@ yourself to learn your way out.
 
 Yak shaving can get dangerous. Obviously, it's important to know when not to
 start yak shaving. Don't, for example, go on a great yak shave while the
-servers you're in charge of a work are on fire.
+servers you're in charge of at work are on fire.
 
 However, it's equally, if not more, important to know when to stop yak shaving.
 In order to reap the benefits of an edifying yak shaving you need to return to
