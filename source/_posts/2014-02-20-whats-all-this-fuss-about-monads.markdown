@@ -21,7 +21,7 @@ This won't be a formal attempt at defining monads but rather a practical
 look at the expressive power they give the programmer using them. In other
 words, if you're looking for some category theory, look elsewhere.
 
-## What you should already know
+## No PhD Required
 
 In order to get the most out of this article you should be somewhat comfortable with the
 basic tenants of functional programming (especially first class functions), and you
@@ -40,7 +40,7 @@ know along the way. Also, this will not be an academic explanation of what a mon
 If you're looking for your answers based in Category Theory, you'll have to search
 elsewhere.
 
-## A Look Ahead
+## Yo Dawg. I Heard You Like Values...
 
 Before we get started, it's best to look ahead to where we are going. Haskell
 is very statically and strongly typed. `"hello"` is a `String` and `1.0` is a
@@ -151,7 +151,7 @@ in?
   at all.
 * And many more!
 
-## What's next
+## What's Next
 
 Now that we know where we're headed, we'll start next time looking at two
 concepts central to monads, functors and applicative functors. All monads are
