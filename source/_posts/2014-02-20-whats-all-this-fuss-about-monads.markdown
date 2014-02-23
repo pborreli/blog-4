@@ -9,7 +9,7 @@ categories: fp functional programming monads
 Despite Functional Programming's (FP) growing popularity, for many "normal
 programmers" the language family seems to be merely an academic exercise that
 they are neither capable of or willing to engage in. Despite there being many FP
-languages that arguably much more accessible than some "normal" programming
+languages that are arguably much more accessible than some "normal" programming
 languages like C++ (e.g.  Elixir), FP does at times have some concepts that remain
 fuzzy even to those who have programmed before in the functional style.
 
