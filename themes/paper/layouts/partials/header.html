@@ -41,6 +41,7 @@
   <header class="header">
     {{ if .IsHome }}
     <h1 class="title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></h1>
+    <h3 class="subtitle">{{.Site.Params.author}}</h3>
     {{ else }}
     <p class="title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></p>
     {{ end }}

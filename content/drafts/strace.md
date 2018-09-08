@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Strace"
-date: 2013-06-02 13:03
-comments: true
-published: false
-categories:
+date: 2013-06-02T13:03:00+01:00
+draft: true
 ---
 
 Sometimes when debugging on a unix-like OS, you need some extra help to figure

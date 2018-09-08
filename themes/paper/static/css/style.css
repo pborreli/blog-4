@@ -84,8 +84,7 @@ pre, code {
 ============================================================= */
 .header {
   display: flex;
-  justify-content: space-between;
-  height: 65px;
+  flex-direction: column;
   padding-left: 30px;
   padding-right: 30px;
   line-height: 65px;
@@ -100,11 +99,14 @@ pre, code {
   font-weight: 700;
   line-height: 35px;
 }
+.subtitle {
+  font-size: 16px;
+}
 .noscroll {
   overflow: hidden;
 }
 .menu-toggle {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   right: 0;

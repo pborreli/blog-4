@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Fear"
-date: 2013-05-31 20:37
+date: 2013-05-31T20:37:00+01:00
 ---
 Fear is something that we all experience. Generally when we think of fear, we
 conjure up stereotypical images of snakes or serial killers in our minds. And it makes sense

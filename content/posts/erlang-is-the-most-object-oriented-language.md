@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Erlang is the Most Object Oriented Language"
-date: 2013-10-03 11:49
-comments: true
-categories: erlang oo object-oriented functional paradigms
+date: 2013-10-03T11:49:00+01:00
 ---
 
 Here's an idea: [Erlang](http://www.erlang.org/) is the only true object oriented

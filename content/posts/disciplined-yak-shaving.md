@@ -1,9 +1,6 @@
 ---
-layout: post
-title: "Disciplined Yak Shaving"
-date: 2014-01-21 22:18
-comments: true
-categories: tips learning yak-shaving
+title: "Disciplined Yak Shaving 🐂"
+date: 2014-01-21T22:18:00+01:00
 ---
 
 Being productive is more popular than ever. Everyone wants to get more and more done in

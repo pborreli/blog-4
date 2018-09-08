@@ -1,8 +1,6 @@
 ---
-layout: post
-title: "ActiveRecord Connections: A High Level Overview"
-date: 2013-06-26 22:09
-comments: true
+title: "ActiveRecord Connections"
+date: 2013-06-26T22:09:00+01:00
 categories: [activerecord, code-walkthrough, rails-4.0]
 ---
 

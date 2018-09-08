@@ -1,9 +1,6 @@
 ---
-layout: post
-title: "What's All This Fuss About Monads?"
-date: 2014-02-20 19:30
-comments: true
-categories: fp functional programming monads
+title: "What's All This Fuss About Monads? λ"
+date: 2014-02-20T19:30:00+01:00
 ---
 
 Despite Functional Programming's (FP) growing popularity, for many "normal

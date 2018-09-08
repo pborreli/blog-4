@@ -1,6 +1,5 @@
 ---
-layout: post
-title: "Pilgrimage"
+title: "Pilgrimage ✈️"
 date: 2015-01-04T00:03:00+01:00
 ---
 

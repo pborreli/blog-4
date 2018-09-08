@@ -1,9 +1,6 @@
 ---
-layout: post
-title: "Babel"
-date: 2014-05-26 22:07
-comments: true
-categories:
+title: "Babel 📜"
+date: 2014-05-26T22:07:00+01:00
 ---
 
 *And the Lord said, Behold, the people is one, and they have all one language*

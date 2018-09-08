@@ -1,4 +1,7 @@
 baseURL = "https://rylev.github.io/"
 languageCode = "en-us"
-title = "You Learn Something New Everyday"
+title = "You Learn Something New Everyday 💭"
 theme = "paper"
+
+[params]
+  author = "Ryan Levick"
