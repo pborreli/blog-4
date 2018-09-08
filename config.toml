@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "You Learn Something New Everyday"
+theme = "paper"
