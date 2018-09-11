@@ -36,16 +36,18 @@ Using the awesome tool [`cargo-expand`](https://github.com/dtolnay/cargo-expand)
 
 ```rust
 // ... imports above
+
 pub fn add(a: u16, b: u8) -> u16 {
   a + (b as u16)
 }
+
 #[export_name = "add"]
 #[allow(non_snake_case)]
 #[cfg(all(target_arch = "wasm32", not(target_os = "emscripten")))]
 pub extern "C" fn __wasm_bindgen_generated_add(
   arg0: <u16 as ::wasm_bindgen::convert::FromWasmAbi>::Abi,
   arg1: <u8 as ::wasm_bindgen::convert::FromWasmAbi>::Abi,
-  ) -> <u16 as ::wasm_bindgen::convert::IntoWasmAbi>::Abi {
+) -> <u16 as ::wasm_bindgen::convert::IntoWasmAbi>::Abi {
   ::wasm_bindgen::__rt::link_mem_intrinsics();
   let _ret = {
     let mut __stack = unsafe { ::wasm_bindgen::convert::GlobalStack::new() };
@@ -132,6 +134,7 @@ pub fn make_smile(mut a: String) -> String {
   a.push_str(" :)");
   a
 }
+
 #[export_name = "make_smile"]
 #[allow(non_snake_case)]
 #[cfg(all(target_arch = "wasm32", not(target_os = "emscripten")))]
@@ -141,7 +144,9 @@ pub extern "C" fn __wasm_bindgen_generated_make_smile(
   ::wasm_bindgen::__rt::link_mem_intrinsics();
   let _ret = {
     let mut __stack = unsafe { ::wasm_bindgen::convert::GlobalStack::new() };
-    let arg0 = unsafe { <String as ::wasm_bindgen::convert::FromWasmAbi>::from_abi(arg0, &mut __stack) };
+    let arg0 = unsafe {
+      <String as ::wasm_bindgen::convert::FromWasmAbi>::from_abi(arg0, &mut __stack)
+    };
     make_smile(arg0)
   };
   <String as ::wasm_bindgen::convert::IntoWasmAbi>::into_abi(_ret, &mut unsafe {

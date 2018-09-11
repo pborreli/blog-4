@@ -32,6 +32,21 @@
 <script data-no-instant>InstantClick.init();</script>
 <link href="{{.Site.BaseURL}}css/default.css" rel="stylesheet">
 <script src="{{.Site.BaseURL}}js/highlight.pack.js" data-no-instant></script>
+<style type='text/css'>
+    pre, code {
+        white-space: pre;
+        overflow-x: scroll;
+    }
+    .hljs {
+        display: inline-block;
+        overflow-x: scroll;
+        padding: 0.5em;
+        padding-right: 100%;
+        background: #002b36;
+        color: #839496;
+        -webkit-text-size-adjust: none;
+    }
+</style>
 <script data-no-instant>
   // hljs.initHighlightingOnLoad();
   addMenuListener();
