@@ -1,5 +1,5 @@
 ---
-title: "Wasm-Bindgen"
+title: "Wasm-Bindgen Interop"
 date: 2018-09-09T12:33:01+02:00
 draft: true
 ---
@@ -140,3 +140,83 @@ pub extern "C" fn __wasm_bindgen_generated_test(
 ```
 
 As you can tell the example of the String is exactly the same as the example we saw before (albeit this time with one fewer argument). Let's see if the `from_abi` implemenation for String is different from `u16` and `u8`.
+
+```rust
+impl FromWasmAbi for String {
+  type Abi = <Vec<u8> as FromWasmAbi>::Abi;
+
+  #[inline]
+  unsafe fn from_abi(js: Self::Abi, extra: &mut Stack) -> Self {
+    String::from_utf8_unchecked(<Vec<u8>>::from_abi(js, extra))
+  }
+}
+```
+
+This is interesting. We see here that we're calling the Rust standard library `String::from_utf8_unchecked` method which turns a buffer of bytes into a String (without checking that it is actually valid utf-8. This means if we manage to pass a buffer of bytes to this function that's not actually valid utf-8, weird things will happen.
+
+The argument to this function is a `Vec<u8>` that comes from calling `from_abi` for `Vec<u8>`. The implementation is based on the `FromWasmAbi` for `Vec<u8>` which is a combination of the generic implementation of `FromWasmAbi` for `Vec<T>` and the generic implemenation `FromWasmAbi` for `Box<[T]>` when the associated `Abi` type is a type called `WasmSlice`. So let's have a look at both these implementations:
+
+```rust
+impl<T> FromWasmAbi for Vec<T> where Box<[T]>: FromWasmAbi<Abi = WasmSlice> {
+  type Abi = <Box<[T]> as FromWasmAbi>::Abi;
+
+  unsafe fn from_abi(js: Self::Abi, extra: &mut Stack) -> Self {
+    <Box<[T]>>::from_abi(js, extra).into()
+  }
+}
+
+impl FromWasmAbi for Box<[u8]> {
+  type Abi = WasmSlice;
+
+  #[inline]
+  unsafe fn from_abi(js: WasmSlice, extra: &mut Stack) -> Self {
+    let ptr = <*mut u8>::from_abi(js.ptr, extra);
+    let len = js.len as usize;
+    Vec::from_raw_parts(ptr, len, len).into_boxed_slice()
+  }
+}
+
+```
+
+So we can see the implementation for `Vec<T>` just relies on the implementation for `Box<[T]>` and the fact that the Rust standard librar allows us to turn a `Box<[u8]>` into a `Vec<u8>`. The implementation of `FromWasmAbi` for `Box<[u8]>` knows how to get a pointer and a length from the `WasmSlice` it gets passed and then turn those inot a `Vec` using the standard libraries function `Vec::from_raw_parts` and then turning that `Vec` into a `Box<[u8]>` a.k.a a boxed slice.
+
+And if we keep going down the rabbit hole, we can look into the implementation of `from_abi` for `*mut u8`, but it's not very interesting since it just converts the type from `u32` to a `*mut` pointer.
+
+So now we know that our top level exported function takes a `WasmSlice` which gets converted through `Box<[u8]>` to `Vec<u8>` and finally to `String` which our original function can work on. But to fully understanding what's going on, we'll need to look at the generated code on the JS side.
+
+```javascript
+export function test(arg0) {
+  const [ptr0, len0] = passStringToWasm(arg0);
+  const retptr = globalArgumentPtr();
+  wasm.test(retptr, ptr0, len0);
+  const mem = getUint32Memory();
+  const rustptr = mem[retptr / 4];
+  const rustlen = mem[retptr / 4 + 1];
+  const realRet = getStringFromWasm(rustptr, rustlen).slice();
+  wasm.__wbindgen_free(rustptr, rustlen * 1);
+  return realRet;
+}
+```
+
+Ok, so first we take the argument to our function (which is a JavaScript String) and pass it to a function call `passStringToWasm`. This function is reponsible for converting our String to utf-8 (since JavaScript strings are not normally utf-8, but Rust expects utf-8 strings), allocating space in the Wasm heap, and putting the String on the Wasm heap. Let's take a look:
+
+```javascript
+function passStringToWasm(arg) {
+  const buf = cachedEncoder.encode(arg);
+  const ptr = wasm.__wbindgen_malloc(buf.length);
+  getUint8Memory().set(buf, ptr);
+  return [ptr, buf.length];
+}
+```
+
+After, passing the String to Wasm, we call `globalArgumentPtr` to get a pointer to somewhere in the Wasm heap. Just like `__wbindgen_malloc`, we won't be taking a look at this in detail, but these are functions the wasm_bindgen is defining for us.
+
+You might be asking now why our call to the `test` function has three arguments `retptr`, `ptr0` and `len0` and no return value when our exported function has only one argument and a return value. Wouldn't we expect the call signature of our exported function to match the call signature that we see when we use that function from JavaScript?
+
+The answer to this is the weirdness of how Rust and LLVM decided the "ABI" of function calls for the Wasm target. There are two rules that combine together to product the interesting call signature we see in the JavaScript:
+* Complex arguments (i.e. arguments that are combinations of the 4 basic types Wasm supports) are "splatted" (meaning called as seperate arguments)
+* Values that are too big are returned by pointer that is passed as the first argument
+
+The first rule means that our `WasmSlice` which is composed of two `u32` is broken into those two values and those two values are passed as seperate arguments. The second rule means that instead of our function returning a `WasmSlice` it instead puts that `WasmSlice` as the location specified by the first argument.
+
+Once this is done, the function then gets the
