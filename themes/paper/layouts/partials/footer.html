@@ -30,17 +30,18 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" data-no-instant></script>
+<link href="{{.Site.BaseURL}}css/default.css" rel="stylesheet">
+<script src="{{.Site.BaseURL}}js/highlight.pack.js" data-no-instant></script>
 <script data-no-instant>
-  hljs.initHighlightingOnLoad();
+  // hljs.initHighlightingOnLoad();
   addMenuListener();
-  InstantClick.on('change', function() {
+  // InstantClick.on('change', function() {
     var blocks = document.querySelectorAll('pre code');
-    console.log(blocks)
     for (var i = 0; i < blocks.length; i++) {
+    // console.log(blocks[i])
       hljs.highlightBlock(blocks[i]);
     }
-  });
+  // });
   function addMenuListener() {
     var $toggle = document.querySelector('.menu-toggle');
     var $body = document.querySelector('body');
