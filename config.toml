@@ -1,4 +1,4 @@
-baseURL = "https://rylev.github.io/"
+baseURL = "http://blog.ryanlevick.com/"
 languageCode = "en-us"
 title = "You Learn Something New Everyday 💭"
 theme = "paper"
