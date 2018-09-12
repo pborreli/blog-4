@@ -1,13 +1,13 @@
 ---
 title: "Wasm-Bindgen Interop"
-date: 2018-09-12T9:33:01+02:00
+date: 2018-09-12T09:33:01+02:00
 ---
 
 In recent projects of mine, I've been using [WebAssembly](https://webassembly.org/) quite a bit. WebAssembly (Wasm) is "a new binary instruction format for a stack based virtual machine" that lets you use languages besides JavaScript to run code on a web page - usually either for performance reasons or to run code you'd like to share across different platforms. In my opinon, the most promising of these languages, due to its lack of a need for a runtime and great tooling is [Rust](https://www.rust-lang.org/).
 
 The best way to use Rust with WebAssembly is through [Wasm-Bindgen](https://github.com/rustwasm/wasm-bindgen). Wasm-Bindgen makes it easy to write Rust code that compiles down to Web Assembly that is easily interopable with JavaScript. It is both a library for generating the boilerplate Rust for functions that JavaScript can call as well as a cli tool for generating the boilerplate JavaScript that can easily interop with WebAssembly.
 
-In this post, we'll be examining how Wasm-Bindgen creates a bridge between Rust and JavaScript. We'll take a look at numbers and strings and how those types are transformed and made consumable from Rust (as compiled WebAssembly) by JavaScript.
+In this post, we'll be examining how Wasm-Bindgen creates a bridge between Rust and JavaScript. We'll take a look at numbers and strings and how those types are transformed and made consumable from Rust (as compiled WebAssembly) by JavaScript. This post will take a look at internals to Wasm-Bindgen. What's written below is true for the current version of Wasm-Bindgen at the time of this writing (`0.2.21`), but the details might change in the future.
 
 ## The Problem
 
