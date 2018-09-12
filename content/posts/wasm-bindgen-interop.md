@@ -1,5 +1,5 @@
 ---
-title: "Rust and JavaScript Interop"
+title: "Rust and JavaScript Interop ↔️"
 date: 2018-09-12T09:33:01+02:00
 ---
 
