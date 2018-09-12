@@ -401,8 +401,10 @@ pre, code {
 .post-content code {
   padding: 3px 6px;
   font-size: 0.75em;
-  white-space: pre-wrap;
   border-radius: 3px;
+}
+.post-content p code {
+  background: #bbbbbb80;
 }
 .post-content blockquote {
   margin: 0 0 0 -23px;
