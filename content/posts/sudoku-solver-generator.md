@@ -26,7 +26,8 @@ Let's write this as pseduo-code which might be easier to follow:
 ```ruby
 # assume we have a variable `board` which is our Sudoku board
 
-# Function for recursively solving the board starting a index `cell_index`
+# Function for recursively solving the board
+# starting a index `cell_index`
 def solve(cell_index)
   # If we've made it to index 81, we've gone through all 81 cells.
   # We're done!
@@ -93,8 +94,9 @@ Once we have these things our code can look something like this:
 
 ```ruby
 def solve(index, forbidden_index, forbidden_value)
-  # same implementation above except possible values are tried at random and
-  # we cannot fill the cell at forbidden_index with the forbidden_value
+  # same implementation above except possible values
+  # are tried at random and we cannot fill the cell at
+  # forbidden_index with the forbidden_value
 end
 
 # Create an empty board
