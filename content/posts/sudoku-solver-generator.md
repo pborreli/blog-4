@@ -150,4 +150,4 @@ After 45 the variance continues to grow and grow.
 
 Once we reach 55 and above then the performance is completely unpredicatable, sometimes taking upwards of 10s of seconds (and even one run of over a minute) to complete while others still complete in well under a second.
 
-What do you find interesting about this data? Let me know on [Twitter](https://twitter.com/itchyankles)!
+If you want to take a look at the data yourself, you can find it [here](https://docs.google.com/spreadsheets/d/1WnUv8M5fGSgHpOvNJ31TUNfcTL-S_s3nTHo4QZqWAr8/edit?usp=sharing). What do you find interesting about it? Let me know on [Twitter](https://twitter.com/itchyankles)!
