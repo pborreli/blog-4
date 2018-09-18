@@ -18,10 +18,10 @@ So in a bit more detail the algorithm is:
 5. Set the value of the cell to the current possible value
 6. Recursively go back to step 2 with the next cell
 7. Check if the recursive call returned as success.
-8. If it did return success from the recursive call, else coutinuing iterating.
+8. If it did return success from the recursive call, else continuing iterating.
 9. If iterating completes without having returned success, return failure
 
-Let's write this as pseduo-code which might be easier to follow:
+Let's write this as pseudo-code which might be easier to follow:
 
 ```ruby
 # assume we have a variable `board` which is our Sudoku board
@@ -76,7 +76,7 @@ Now that we have a solver, making a puzzle generator is easy.
 
 ## Generator
 
-In general our algorithm for generating puzzels that only have one solution is as follows:
+In general our algorithm for generating puzzles that only have one solution is as follows:
 
 1. Start with a completely empty board
 2. Run the solver (ensuring that the iteration of possible values is random)
@@ -132,7 +132,7 @@ I was curious to see how fast the solver was at generating boards with ever incr
 
 ![Sudoku Generation](/img/sudoku_generation.png)
 
-Clearly things are pretty quick for generating puzzels with anywhere between 1 and around 40 blank cells.
+Clearly things are pretty quick for generating puzzles with anywhere between 1 and around 40 blank cells.
 
 Here's a zoomed in picture of the generations with 1-30 blank cells with the time scale no longer logarithmic:
 
@@ -144,7 +144,7 @@ Now let's take a look at 31-45 where performance starts getting shacky:
 
 ![Sudoku Generation 31-45](/img/sudoku_generation_31_45.png)
 
-The variance between different runs is starting to grow. Interestingly the lower bound of runs continues to grow lineraly.
+The variance between different runs is starting to grow. Interestingly the lower bound of runs continues to grow linearly.
 
 After 45 the variance continues to grow and grow.
 
